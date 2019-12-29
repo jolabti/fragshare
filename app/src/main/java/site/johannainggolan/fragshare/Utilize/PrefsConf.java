@@ -38,4 +38,8 @@ public class PrefsConf {
         editor.remove(key);
         editor.apply();
     }
+
+    public String getString(String key, String defaultValue){
+        return prefs.getString(key,defaultValue);
+    }
 }
