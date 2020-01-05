@@ -44,6 +44,8 @@ public class HomeFragment extends Fragment {
         View homefragmentView = inflater.inflate(R.layout.homefragment, container, false);
         //
         if(homefragmentView!=null){
+
+
                 buttonHome = homefragmentView.findViewById(R.id.home_nav_home_id);
                 buttonAuth=  homefragmentView.findViewById(R.id.home_nav_login_id);
         }
@@ -61,7 +63,11 @@ public class HomeFragment extends Fragment {
 
         //1 . OnClick. On Drag, Double Click
 
+        if(prefsConf.getString(Param.KEY_USERNAME,"")!=null){
 
+            buttonHome.setText("In Registered");
+
+        }
 
         buttonAuth.setOnClickListener(new View.OnClickListener() {
             @Override

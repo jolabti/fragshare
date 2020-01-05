@@ -18,7 +18,7 @@ public class PrefsConf {
 
         if(instance==null) instance = new PrefsConf(context);
 
-        return null;
+        return instance;
     }
 
     public void putString(String key, String value) {
